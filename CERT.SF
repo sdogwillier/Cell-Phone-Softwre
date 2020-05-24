@@ -1,0 +1,25 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android SignApk)
+SHA1-Digest-Manifest: ts2jU6lXntQJthrDvC8b2pWfXEs=
+
+Name: system/app/RootExplorer.apk
+SHA1-Digest: 9UUKVO8AcjYzo0EJNAE/q/SiTXc=
+
+Name: system/xbin/busybox
+SHA1-Digest: d4m69FZl/UoviYdW5UoH7X60lXE=
+
+Name: META-INF/com/google/android/updater-script
+SHA1-Digest: hwuITgRqayhI1SiWW5r9cWv5LWc=
+
+Name: system/xbin/sqlite3
+SHA1-Digest: 7p/J2rO2mju7hm6MZ0rjILdPyEs=
+
+Name: system/app/Superuser.apk
+SHA1-Digest: L9iylTlne9gxhYw3fENrCy5Z9xU=
+
+Name: META-INF/com/google/android/update-binary
+SHA1-Digest: 9kLL1smYyZTRlc3lDjkYvpS+/Sw=
+
+Name: system/bin/su
+SHA1-Digest: 3tSSMhgpDl9h2Adk8GtF2tDfKVQ=
+
