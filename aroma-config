@@ -1,0 +1,63 @@
+ini_set("force_colorspace", "rgba");
+##
+# Show Simple Splash
+#
+splash(
+#  #-- Duration 5000ms / 5 seconds
+    5000,
+  
+  #-- <AROMA Resource Dir>/logo.png
+    "logo"
+);
+
+################################################################################################################################################################# 
+ini_set("rom_name",             "AXES ROM");
+ini_set("rom_version",          "1");
+ini_set("rom_author",           "@AXES_Team");
+ini_set("rom_device",           "SM-A520F/DS");
+ini_set("rom_date",             "SAT 12/05/2017");
+#################################################################################################################################################################
+fontresload( "0", "ttf/DroidSans.ttf;ttf/DroidSansArabic.ttf;ttf/DroidSansFallback.ttf;", "12" );
+theme("touchwiz");
+#################################################################################################################################################################
+viewbox(
+"WELCOME",
+"INSTALL <b>"+
+ini_get("rom_name")+
+"</b> FOR <b>"+ini_get("rom_device")+"</b>.\n\n"+
+"INFORMATION OF THE ROM:\n\n"+
+"NAME \t: <b><#selectbg_g>"+ini_get("rom_name")+"</#></b>\n"+
+"VERSION\t: <b><#selectbg_g>"+ini_get("rom_version")+"</#></b>\n"+
+"BUILD DATE\t: <b><#selectbg_g>"+ini_get("rom_date")+"</#></b>\n"+
+"DEVELPER\t: <b><#selectbg_g>"+ini_get("rom_author")+"</#></b>\n"+
+"<b><#f00>ONLY FOR SM-A520F/DS</#></b>\n\n\n"+	
+"PRESS NEXT TO CONTINUE",
+"@welcome"
+);
+#################################################################################################################################################################
+setvar("retstatus",
+install(
+"",
+"<b>"+ini_get("rom_name")+"</b> INSTALLATION\n"+
+"PLEASE WAIT WHILE INSTALLATION FINISHING INSTALLING <b>"+ini_get("rom_name")+
+"</b> THIS PROCESS WILL TAKE SOME TIME",	
+"@install",	
+"THE INSTALLATION FINISHED FROM INSTALLING <b>"+ini_get("rom_name")+
+"</b> PRESS NEXT TO CONTINUE"
+)
+);
+#################################################################################################################################################################
+checkviewbox(
+"",
+"<#selectbg_g><b>INSTALLTION COMPLETED</b></#>\n\n"+
+"<b>"+ini_get("rom_name")+"</b> NOW INSTALLED IN YOUR PHONE",
+"@welcome",
+"REBOOT DEVICE",
+"1",
+"reboot_it"
+);
+if
+getvar("reboot_it")=="1"
+then
+reboot("onfinish");
+endif;
